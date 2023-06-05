@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+Ecommerce Store using Redux Toolkit
+This project is a small ecommerce store built using Redux Toolkit to manage the state of the application. It utilizes JSON data from the Dummy JSON API to simulate a product listing and shopping cart functionality.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+Product listing: Displays a list of products fetched from the Dummy JSON API.
+Shopping cart: Allows users to add and remove items from the shopping cart.
+Quantity control: Users can increase or decrease the quantity of items in the cart.
+Loading state: Displays a loading message while fetching the product data.
+Error handling: Handles errors that may occur during the API call.
+Technologies Used
+React: A JavaScript library for building user interfaces.
+Redux Toolkit: A package that simplifies the process of managing state in Redux.
+React Redux: A library that integrates Redux with React components.
+React Router: A library for handling routing in a React application.
+Material-UI: A popular UI component library for React.
+Dummy JSON API: An API that provides dummy JSON data for testing and prototyping.
+Getting Started
+Follow the steps below to get the project up and running on your local machine:
 
-## Available Scripts
+Clone the repository:
 
-In the project directory, you can run:
+bash
+Copy code
+git clone https://github.com/your-username/ecommerce-store.git
+Navigate to the project directory:
 
-### `npm start`
+bash
+Copy code
+cd ecommerce-store
+Install the dependencies:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy code
+npm install
+Start the development server:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+Copy code
+npm start
+Open your browser and visit http://localhost:3000 to see the application running.
 
-### `npm test`
+Project Structure
+The project follows a typical React folder structure:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+src/: Contains the main source code for the application.
+components/: Contains reusable UI components used in the application.
+features/: Contains Redux slices representing different features or domains of the application.
+pages/: Contains the main pages or views of the application.
+App.js: The root component of the application that handles routing.
+index.js: The entry point of the application.
+Redux Store
+The Redux store is configured using Redux Toolkit. It consists of two slices:
 
-### `npm run build`
+productSlice: Manages the state related to products, including fetching the product list from the API.
+cartSlice: Manages the state of the shopping cart, including adding and removing items and adjusting quantities.
+The store is created and configured in the store.js file using the configureStore function from Redux Toolkit.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+API Integration
+The project fetches product data from the Dummy JSON API using the fetch function. The callProductListApi async thunk action is responsible for making the API call and dispatching the corresponding actions based on the API response.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The API response is handled in the extraReducers section of the productSlice. The state is updated accordingly, including setting the loading and error flags.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Routes
+The application uses React Router for handling routes. Currently, there are two routes:
 
-### `npm run eject`
+/: The home page that displays the product listing.
+/cart: The cart page that displays the items in the shopping cart.
+Contributing
+Contributions to this project are welcome. If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+License
+This project is licensed under the MIT License.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Acknowledgments
+This project was built based on a tutorial and aims to demonstrate the practical use of Redux Toolkit in a small ecommerce store. Thanks to the creators
